@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+    <meta name="theme-color" content="#FFF" />
+    <link rel="canonical" href="[seo_url]" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="description" content="[seo_description]" />
+    <meta property="og:url" content="[seo_url]" />
+    <meta property="og:title" content="[title]" />
+    <meta property="og:image" content="[image]" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="fb:pages" content="94604237016" />
+    <meta property="fb:app_id" content="489210501129201" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@larepublica_pe" />
+    <meta name="twitter:title" content="[title]" />
+    <meta name="twitter:description" content="[seo_description]" />
+    <meta name="twitter:image" content="[image]" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta name="lang" content="es_PE" />
+    <meta name="author" content="Redacción LR" />
+    <meta name="keywords" content="[seo_keywords]" />
+    <title>[title]</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.larepublica.pe/favicon-32x32.png" />
+</head>
+
+<body>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #212529;
+            font-family: sans-serif;
+        }
+
+        html {
+            -ms-text-size-adjust: 100%;
+            font-size: 62.5%;
+            -webkit-text-size-adjust: 100%;
+            color: #212529;
+            scroll-behavior: smooth;
+        }
+
+        body,
+        html {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .w-1000 {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        footer {
+            padding: 42px;
+            font-family: sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            transition: all 0.5s ease;
+            padding: 15px 42px;
+            background: lightgrey;
+            border-bottom: 4px solid #fe0404;
+        }
+
+        header span {
+            font-size: 0;
+        }
+
+        header img {
+            width: 140px;
+        }
+
+        footer span {
+            display: block;
+            text-align: center;
+            color: #545b6a;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        span [class*="btn-"] {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        span a.btn-fb {
+            margin-left: 0;
+        }
+
+        span a.btn-fb,
+        span a.btn-twt,
+        span a.btn-wsp {
+            background-image: url(https://files.larepublica.pe/Larepublica/2020/11/09/iconos-redes-sociales-blanco-1604962294.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+
+        span a.btn-twt {
+            background-position: 0 -40px;
+            background-repeat: no-repeat;
+        }
+
+        span a.btn-wsp {
+            background-position: 0 -80px;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 5.5rem;
+            line-height: 1.3;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-family: sans-serif;
+            width: 100%;
+            margin: -110px auto 25px;
+            padding-top: 120px;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            font-family: sans-serif;
+            width: 100%;
+            margin: 0 auto 25px;
+            max-width: 750px;
+        }
+
+        h4:before {
+            position: relative;
+            width: 40px;
+            height: 4px;
+            background-color: #e30613;
+            content: "";
+            display: block;
+            bottom: 4px;
+        }
+
+        .texto-lr {
+            font-size: 11pt;
+            font-weight: 400;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        .texto-lr,
+        h1,
+        h2 {
+            font-family: sans-serif;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        h1,
+        h2 {
+            color: #fff;
+            /*text-align: center;*/
+            width: 100%;
+        }
+
+        h1 {
+            max-width: 750px;
+        }
+
+        h2 {
+            max-width: 750px;
+        }
+
+        .texto-lr {
+            max-width: 750px;
+            margin: 0 auto 25px;
+            line-height: 1.38;
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            .p-10 {
+                padding: 0 10px;
+            }
+
+            .texto-lr {
+                margin: 0 auto 20px;
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+                margin: 20px auto;
+            }
+
+            h3 {
+                margin: -110px auto 15px;
+                padding: 120px 15px 0 15px;
+            }
+
+            h4 {
+                padding: 0 15px;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            footer {
+                padding: 27.9px 30px;
+            }
+
+            .w-text {
+                padding: 0 30px 10px;
+                max-width: 100%;
+                height: initial !important;
+            }
+
+            .hero-image {
+                display: block !important;
+                min-height: initial !important;
+            }
+
+            .hero-image .w-img {
+                position: initial;
+            }
+
+            .w-text h1 {
+                margin-top: 0;
+                padding-top: 20px;
+            }
+            .botones-header div {
+                padding: 5px !important;
+                font-size: 8pt;
+            }
+        }
+
+        span a.btn-fb,
+        span a.btn-twt,
+        span a.btn-wsp {
+            background-size: cover;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        span [class*="btn-"] {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        @media (min-width: 768px) {
+
+            header img {
+                width: 160px;
+            }
+
+            span a.btn-twt {
+                background-position: 0 -40px;
+                background-repeat: no-repeat;
+            }
+
+            span a.btn-wsp {
+                background-position: 0 -80px;
+                background-repeat: no-repeat;
+            }
+
+            h1,
+            h2 {
+                max-width: 80%
+            }
+        }
+    </style>
+    <style>
+        h1 {
+            font-size: 38px;
+        }
+
+        .headline {
+            font-weight: 100;
+        }
+
+        .container {
+            padding: 45px 15px 15px 15px;
+            margin: 0 auto;
+            max-width: 750px;
+        }
+
+        .wrapper {
+            border-left: 5px solid #eaeaea;
+            padding: 0 25px;
+        }
+
+        .item-list {
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        .item-list::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            top: 7%;
+            transform: translate(-50%, -50%);
+            left: -4.4%;
+            background-color: #fe2d04;
+            z-index: 1;
+        }
+
+        .item-list::after {
+            content: "";
+            background-color: #000;
+            border-radius: 50%;
+            height: 7px;
+            left: -12%;
+            position: absolute;
+            top: 7%;
+            transform: translate(-50%, -50%);
+            width: 7px;
+        }
+
+        .item-list h4 {
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0 0 10px 0;
+        }
+
+        .item-list p {
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 0 0 30px 0;
+        }
+
+        .point {
+            background-color: #eaeaea;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            height: 20px;
+            left: -12%;
+            position: absolute;
+            top: 7%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+        }
+
+        time {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .flourish-embed {
+            margin: 20px 10px;
+        }
+
+        .flourish-credit {
+            display: none;
+        }
+
+        @media (min-width: 360px) {
+            .item-list::before {
+                left: -3.5%;
+                top: 9%;
+            }
+
+            .item-list::after {
+                left: -10%;
+                top: 9%;
+            }
+
+            .point {
+                left: -10%;
+                top: 9%;
+            }
+        }
+
+        @media (min-width: 400px) {
+            .item-list::before {}
+
+            .item-list::after {
+                left: -9%;
+            }
+
+            .point {
+                left: -9%;
+            }
+        }
+
+        @media (min-width: 410px) {
+            .item-list::before {}
+
+            .item-list::after {
+                left: -8.5%;
+            }
+
+            .point {
+                left: -8.5%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .item-list::before {
+                left: -1.4%;
+                top: 15%;
+            }
+
+            .item-list::after {
+                left: -4%;
+                top: 15%;
+            }
+
+            .point {
+                border: 3px solid #fff;
+                height: 25px;
+                left: -4%;
+                top: 15%;
+                width: 25px;
+            }
+
+            .headline {
+                margin: 30px auto 0px;
+            }
+
+            .flourish-embed {
+                max-width: 768px;
+                margin: 10px auto;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (min-width: 999px) {
+            .item-list::before {
+                left: -1.2%;
+            }
+
+            .item-list::after {
+                left: -3.1%;
+            }
+
+            .point {
+                left: -3.1%;
+            }
+        }
+    </style>
+    <style>
+        .container__menu {
+            font-size: 0;
+        }
+
+        .mapa_distribucion {
+            display: block;
+            margin: 0 auto;
+            max-width: 970px;
+            width: 100%;
+        }
+
+        .menu__button {
+            display: inline-block;
+            vertical-align: middle;
+            width: 38px;
+        }
+
+        .menu__button button {
+            background-color: transparent;
+            border: none;
+            height: 17px;
+            width: 20px;
+        }
+
+        .menu__button button span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #000;
+            margin: 0 0 3px 0;
+            border-radius: 15px;
+        }
+
+        .menu__button button span:last-child {
+            margin: 0;
+        }
+
+        .menu__left {
+            display: inline-block;
+            vertical-align: middle;
+            width: 175px;
+        }
+
+        .menu__rigth {
+            /* display: inline-block; */
+            text-align: right;
+            vertical-align: middle;
+            /* width: calc(100% - 198px); */
+            float: right;
+            min-width: 140px;
+        }
+
+        .content__menu-mobile {
+            display: none;
+            background-color: #FFF;
+            border-bottom: 1px solid #404040;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            top: 77px;
+            width: 100%;
+        }
+
+        .content__menu-mobile ul {
+            padding: 0 0 10px 0;
+        }
+
+        .content__menu-mobile ul li {
+            padding: 10px 0 0 0;
+        }
+
+        .content__menu-mobile ul li a {
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .active-menu {
+            display: block;
+        }
+
+        .items__menu {
+            display: none;
+        }
+
+        .items__menu ul {
+            padding: 10px 0;
+        }
+
+        .items__menu ul li {
+            display: inline-block;
+            margin: 0 0 0 10px;
+        }
+
+        .items__menu ul li a {
+            color: #383939;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        @media (min-width: 768px) {
+            .menu__button {
+                display: none;
+            }
+
+            /* .menu__left {
+                width: 300px;
+            } */
+
+            .menu__rigth {
+                display: inline-block;
+                /* width: calc(100% - 300px); */
+            }
+
+            .content__menu-mobile {
+                display: none;
+            }
+
+            .items__menu {
+                display: block;
+            }
+        }
+
+        .hero-image {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero-image .opacity {
+            background-color: #000;
+            height: 100%;
+            left: 0;
+            opacity: 0.3;
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .w-img {
+            margin: 65px 0 0 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .w-img img {
+            width: 100%;
+        }
+
+        .w-text {
+            height: calc(100vh - 240px);
+            background: #000;
+            position: relative;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .w-img {
+                height: 100%;
+                background: black;
+                margin: 0;
+                left: 0;
+                overflow: hidden;
+                pointer-events: none;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+
+            .w-img img {
+                height: 100%;
+                object-fit: contain;
+                object-position: top;
+                margin-top: 70px;
+                width: 100%;
+                background: black;
+                /*max-height: 70vh;*/
+            }
+
+            .w-text {
+                /*height: calc(100vh - 260px);*/
+                height: 100%;
+                /*background-color: #000;*/
+                /*background: linear-gradient(180deg, transparent, #000);*/
+                background: linear-gradient(180deg, transparent 0%, #000 25%);
+                position: relative;
+                padding: 42px 42px 20px;
+                width: 100%;
+            }
+        }
+
+        #content__teaser img {
+            width: 100%;
+        }
+
+        .texto-lr small {
+            text-align: center;
+            display: block;
+            font-style: italic;
+        }
+
+        h5 {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        h5.line {
+            font-size: 12px;
+            font-weight: normal;
+            padding-bottom: 2px;
+            min-width: 290px;
+            max-width: 40%;
+            border-bottom: 2px solid #fe0404;
+            margin-top: 0;
+        }
+
+        .iframe-container {
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* 16:9*/
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .iframe-container iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            /*-ms-zoom: 1.25;
+  -moz-transform: scale(1.25);
+  -moz-transform-origin: center;
+  -o-transform: scale(1.25);
+  -o-transform-origin: center;
+  -webkit-transform: scale(1.25);
+  -webkit-transform-origin: center;*/
+        }
+        .botones-header {
+            position: fixed;
+            top: 74px;
+            width: 100%;
+            /* border-bottom: 1px solid black; */
+            background-color: #000;
+            font-size: 10pt;
+            /* overflow-x: scroll; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+        }
+        .botones-header div {
+            padding: 5px 15px;
+            border-left: 1px solid white;
+            height: 100%;
+        }
+        .botones-header a {
+            color: #fff !important;
+        }
+        .botones-header div:first-child {
+            border: none;
+        }
+    </style>
+    <header id="w-header">
+        <div class="container__menu">
+            <!-- <div class="menu__button">                <div class="menu"> <button id="menuMobile"> <span></span> <span></span> <span></span> </button> </div>            </div> -->
+            <div class="menu__left"><a href="https://data.larepublica.pe/" rel="noopener" style="display: inline-block;"
+                    target="_blank">
+                    <picture>
+                        <source id="w-sourceLogoDesktop" media="(min-width: 768px)"
+                            srcset="https://larepublica.cronosmedia.glr.pe/data/2121/10/05/logo.png" />
+                        <img id="w-sourceLogoMobile"
+                            src="https://larepublica.cronosmedia.glr.pe/data/2121/10/05/logo.png" />
+                    </picture>
+                </a></div>
+            <div class="menu__rigth"><span class="items_shared"> <a class="btn-fb btn-Social" data-social="facebook"
+                        href="https://www.facebook.com/sharer/sharer.php?u=[seo_url]" id="id-btn-fb" rel="noopener">
+                    </a> <a class="btn-twt btn-Social" data-social="twitter"
+                        href="https://twitter.com/share?url=[seo_url]&via=LRData" id="id-btn-twt" rel="noopener"> </a>
+                    <a class="btn-wsp" href="https://api.whatsapp.com/send?text=[seo_url]" id="id-btn-wsp"
+                        rel="noopener" target="_blank"> </a> </span></div>
+        </div>
+    </header>
+    <div class="botones-header">
+        <div><a href="#tareas-pendientes-en-salud">Tareas pendientes en salud</a></div>
+        <div><a href="#inseguridad-ciudadana">Inseguridad ciudadana</a></div>
+        <div><a href="#comunidad-transporte-y-educacion">Comunidad: transporte y educación</a></div>
+        <div><a href="#financiamientos-internacionales">Financiamientos internacionales</a></div>
+    </div>
+    <div class="hero-image">
+        <div class="w-img"><img loading="lazy" alt="hero-image" src="https://larepublica.cronosmedia.glr.pe/data/2022/12/29/40g1j93gb7-photo-2022-12-29-18-24-12.jpg" style="display: block" /></div>
+        <!--<div class="opacity"></div>-->
+        <div class="w-text">
+            <h1>[title]</h1>
+            <h2>[teaser]</h2>
+            <!--<i style="font-size:13px; color: white; text-align: right; display: block;">Foto: </i>-->
+        </div>
+    </div>
+
+    <div id="content__main"></div>
+
+    <div id="content__teaser">
+        <div class="texto-lr">
+            <h5 class="legend">Por: Unidad LR Data</h5>
+
+            <h5 class="legend line">Publicado el 29&nbsp;de diciembre de 2022</h5>
+
+            <p class="texto-lr">&nbsp;</p>
+
+            <p class="texto-lr">El 2022 cierra sus d&iacute;as con un pa&iacute;s en duelo, un nuevo exmandatario en
+                prisi&oacute;n y la p&eacute;rdida de las reformas urgentes. El fallido golpe de Estado del expresidente
+                Pedro Castillo, la represi&oacute;n del Gobierno de Dina Boluarte y un Parlamento con intereses
+                particulares desencadenaron una nueva crisis pol&iacute;tica. Pero esa vor&aacute;ginee expuso
+                tambi&eacute;n las demandas desatendidas. Desde la Unidad LR Data se sigui&oacute; la coyuntura
+                pol&iacute;tica y otros temas de inter&eacute;s p&uacute;blico.&nbsp;</p>
+
+            <h3 id="tareas-pendientes-en-salud">Tareas pendientes en salud</h3>
+
+            <p class="texto-lr">Aunque el &eacute;nfasis fue <a
+                    href="https://data.larepublica.pe/envivo-casos-confirmados-muertes-coronavirus-peru/"
+                    target="_blank">la pandemia de la COVID-19</a>, la Unidad abord&oacute; otras necesidades en salud
+                p&uacute;blica que siguieron desatendidas por la desidia de las autoridades. La investigaci&oacute;n <a
+                    href="https://data.larepublica.pe/sin-cobertura-para-salud-mental-aseguradoras-privadas-excluyen-tratamientos-y-el-estado-no-se-da-abasto/"
+                    target="_blank">Sin cobertura para salud mental</a> expuso que el acceso a los servicios era
+                dram&aacute;tico, en un contexto que presentaba elevados &iacute;ndices de personas con trastornos
+                mentales, los cuales incrementaron con el aislamiento. El informe detall&oacute; que las aseguradoras
+                privadas no cubr&iacute;an atenciones en salud mental, pese a que la ley lo tipifica; adem&aacute;s,
+                visibiliz&oacute; la carencia de centros comunitarios, en el que solo hab&iacute;a uno por cada 158.000
+                peruanos. A ello se sum&oacute; el d&eacute;ficit de profesionales en Psicolog&iacute;a y
+                Psiquiatr&iacute;a, quienes se concentran en la capital.</p>
+
+            <div class="flourish-embed flourish-chart" data-src="visualisation/9769066">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+
+            <p class="texto-lr">Pero la escasez atraviesa otras &aacute;reas de la salud. El reportaje <a
+                    href="https://data.larepublica.pe/solo-hay-un-resonador-magnetico-operativo-por-cada-10000-pacientes-con-cancer/"
+                    target="_blank">Solo hay un resonador magn&eacute;tico operativo por cada 10.000 pacientes con
+                    c&aacute;ncer</a> mostr&oacute; la ardua y fat&iacute;dica espera para conseguir una cita. La demora
+                oscila entre tres meses y medio a&ntilde;o. El panorama se agrava con la existencia de solo siete
+                resonadores magn&eacute;ticos para atender a m&aacute;s 70.000 pacientes afiliados al SIS. En EsSalud
+                solo hay cinco resonadores. Los equipos se centran en la capital. El informe cobr&oacute; mayor
+                relevancia cuando se supo que el exministro de Salud Jorge L&oacute;pez vendi&oacute; un
+                tom&oacute;grafo de su propiedad y recibi&oacute; un pago de 70.000 d&oacute;lares de la cl&iacute;nica
+                Dr. Luis Quito.</p>
+
+            <div class="flourish-embed flourish-chart" data-src="story/1648264">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+
+            <h3 id="inseguridad-ciudadana">Inseguridad ciudadana</h3>
+
+            <p class="texto-lr">Otra de las problem&aacute;ticas sociales es la inseguridad ciudadana. El informe <a
+                    href="https://data.larepublica.pe/suplantacion-de-identidad-en-linea-incrementan-denuncias-pero-no-hay-responsables/"
+                    target="_blank">Suplantaci&oacute;n de identidad en l&iacute;nea: incrementan denuncias, pero no hay
+                    responsables</a> report&oacute; que la mayor&iacute;a de las denuncias por este delito son
+                archivadas. La cifra de casos desestimados se elev&oacute; a m&aacute;s de 12.000. Ello debido a la
+                falta de profesionales especializados y el desconocimiento de los fiscales y polic&iacute;as sobre esta
+                materia. Asimismo, detall&oacute; que no hay supervisi&oacute;n en las empresas privadas, las cuales
+                tampoco se hacen responsables y solo se excusan con la actualizaci&oacute;n constante de sus programas.
+                En tanto, la ciudadan&iacute;a es la afectada.</p>
+
+            <p class="texto-lr">Por otro lado, la investigaci&oacute;n <a
+                    href="https://data.larepublica.pe/territorios-del-miedo-lima-y-la-libertad-sometidas-por-la-extorsion/"
+                    target="_blank">Territorios del miedo: Lima y La Libertad sometidas por la extorsi&oacute;n</a>
+                mostr&oacute; las modalidades, el aumento significativo de las denuncias y c&oacute;mo las leyes
+                benefician a los delincuentes m&aacute;s que a sus v&iacute;ctimas. En funci&oacute;n a ello, se
+                dialog&oacute; con el entonces viceministro de Orden Interno del Mininter, Abel Gamarra, quien
+                se&ntilde;al&oacute; que los extranjeros representan el mayor n&uacute;mero de detenidos por ese delito;
+                sin embargo, se corrobor&oacute; que la mayor&iacute;a son peruanos, en un 65%.</p>
+
+            <div class="flourish-embed flourish-chart" data-src="visualisation/11441721">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+
+            <h3 id="comunidad-transporte-y-educacion">Comunidad: transporte y educaci&oacute;n</h3>
+
+            <p class="texto-lr">El 22 de diciembre, la autoridad edil de Lima Metropolitana anunci&oacute; la
+                culminaci&oacute;n del proyecto del Metropolitano para los distritos del norte. LR Data investig&oacute;
+                los problemas en torno a la promesa de mejora de transporte.&nbsp;</p>
+
+            <p class="texto-lr">El informe <a
+                    href="https://data.larepublica.pe/metropolitano-irregularidades-y-motivos-detras-del-retraso-de-ampliacion-hasta-carabayllo/"
+                    target="_blank">Metropolitano: las irregularidades y los motivos detr&aacute;s del retraso de su
+                    ampliaci&oacute;n hasta Carabayllo</a> profundiz&oacute; en los procesos por los que tuvo que pasar
+                para ejecutarse, luego de un transcurso de 12 a&ntilde;os. La demora se dio por la falta de un
+                financiamiento, por lo que inici&oacute; reci&eacute;n en 2020. Tras ello, se llev&oacute; a cabo la
+                licitaci&oacute;n con las empresas privadas, una de ellas implicadas en el caso Odebrecht.
+                Adem&aacute;s, la Contralor&iacute;a detect&oacute; irregularidades, lo que hizo que haya retrasos en el
+                desarrollo f&iacute;sico.&nbsp;</p>
+
+            <p class="texto-lr">Otra nota period&iacute;stica se centr&oacute; en las <a
+                    href="https://data.larepublica.pe/inversiones-de-infraestructura-natural-paralizadas-en-comunidades-con-deficit-del-agua-seguridad-hidrica/"
+                    target="_blank">inversiones de infraestructura natural paralizadas en comunidades con d&eacute;ficit
+                    de agua</a>. Se visibiliz&oacute; que, en Huancavelica, unas 4 millones de personas esperan los
+                proyectos de siembra y cosecha de agua para su subsistencia. Sin embargo, los financiamientos
+                est&aacute;n detenidos en otras regiones como Cusco, &Aacute;ncash y La Libertad, donde solo se
+                ejecut&oacute; 2 millones de soles en conjunto. El informe fue un producto ganador del Fondo del
+                Programa de Capacitaci&oacute;n a Periodistas 2022, organizado por el Proyecto Infraestructura Natural
+                para la Seguridad H&iacute;drica en alianza con la Fundaci&oacute;n Gustavo Mohme LLona.</p>
+
+            <h3 id="financiamientos-internacionales">Financiamientos internacionales</h3>
+
+            <p class="texto-lr">La investigaci&oacute;n <a
+                    href="https://data.larepublica.pe/narcobenefactores-el-tributo-del-narcotrafico-en-los-margenes-de-la-amazonia-peruana/"
+                    target="_blank">Narcobenefactores. El tributo del narco en los m&aacute;rgenes de la Amazon&iacute;a
+                    peruana</a> comprob&oacute; que, en la provincia Mariscal Ram&oacute;n Castilla, ubicada en la
+                triple frontera, las organizaciones de tr&aacute;fico de drogas aprovechan la ausencia del Estado y
+                mantienen una creciente participaci&oacute;n en los asuntos p&uacute;blicos de las comunidades.
+                As&iacute;, con documentos y evidencia gr&aacute;fica, se mostr&oacute; c&oacute;mo los jefes del narco
+                lograron que las comunidades ind&iacute;genas y campesinas los dejaran operar por medio del pago de
+                tributos para obras como losas deportivas, refacciones de colegios y acciones sociales.&nbsp;</p>
+
+            <p class="texto-lr"><br />
+                <img
+                    src="https://lh5.googleusercontent.com/c2wvvpagivzln1DxfR5KP0gfLxTYsMm13_bLYWasDlGpg4JXoZq30UlhjgrC-K4rBckl0I5-Lj5_6DwzV5w6dHDcZaLsAX1lZ_2VC_2qmQe2ZonHopvq67_KegUIWMqx3V49JeyWxctzLA7JA7HLliCuPDw-8deK8hd2uOpbubfPzcX4jkJD3fDFKHRE9g" />
+            </p>
+
+            <p class="texto-lr">Por su parte, <a
+                    href="https://data.larepublica.pe/pasivos-ambientales-los-residuos-de-la-mineria-que-nadie-quiere-asumir/"
+                    target="_blank">Pasivos ambientales. Los residuos de la miner&iacute;a que nadie quiere asumir</a>
+                revel&oacute; que el Estado no ha identificado a los responsables de dejar y abandonar los desechos
+                contaminantes de la explotaci&oacute;n minera (como los dep&oacute;sitos qu&iacute;micos y de basura).
+                Ello porque estas empresas se aprovecharon de los vac&iacute;os en las leyes que les permitieron
+                continuar operando y sin sanciones. Las inacciones trajeron como consecuencia la contaminaci&oacute;n de
+                los r&iacute;os Ramis, cuyo recurso h&iacute;drico es t&oacute;xico y da&ntilde;a poco a poco a las
+                comunidades que se encuentran cerca a sus orillas, pues afecta la salud de los menores, reduce las
+                cosechas y perjudica la ganader&iacute;a.&nbsp;</p>
+
+            <div class="texto-lr"><iframe allow="autoplay; fullscreen; encrypted-media" allowfullscreen=""
+                    allowscriptaccess="always" frameborder="0" scrolling="no"
+                    src="//mdstrm.com/embed/63014b5161a9d308314560f7?player=5ff34f13f89edc69bfe53d79"
+                    style="width:100%; min-height:350px;"></iframe></div>
+
+            <div>&nbsp;</div>
+
+            <p class="texto-lr">Ambos reportajes fueron merecedores de financiamientos internacionales de Connectas, que
+                cuenta con el apoyo del International Center for Journalists (ICFJ) en el marco de la iniciativa para el
+                Periodismo de Investigaci&oacute;n de las Am&eacute;ricas.</p>
+
+            <p class="texto-lr">Si bien se atendieron otros problemas sociales, la Unidad no fue ajena a la
+                convulsi&oacute;n pol&iacute;tica del &uacute;ltimo a&ntilde;o. En ese sentido, se realiz&oacute; un
+                seguimiento a las <a
+                    href="https://data.larepublica.pe/13-gobernadores-electos-y-al-menos-un-candidato-en-siete-regiones-que-iran-a-segunda-vuelta-estan-acusados-de-corrupcion/"
+                    target="_blank">Elecciones Municipales y Regionales 2022</a>, el indulto a <a
+                    href="https://data.larepublica.pe/indulto-a-fujimori-todos-los-caminos-lo-llevan-de-vuelta-al-penal-de-barbadillo/"
+                    target="_blank">Alberto Fujimori</a>, el <a
+                    href="https://data.larepublica.pe/que-sucedera-con-pedro-castillo-tras-intentar-dar-golpe-de-estado-y-romper-el-orden-constitucional/"
+                    target="_blank">fallido golpe de Estado de Pedro Castillo</a> y las <a
+                    href="https://data.larepublica.pe/pais-en-vilo-68-por-ciento-de-las-mesas-de-dialogo-por-conflictos-sociales-se-instalo-despues-de-algun-hecho-de-violencia/"
+                    target="_blank">protestas sociales</a> contra el Gobierno de Dina Boluarte. LR Data reafirma su
+                compromiso de continuar sus investigaciones a profundidad.&nbsp;</p>
+        </div>
+
+    </div>
+    </div>
+    <br>
+    <footer style="background-color: #f0f0f0">
+        <div class="w-1000">
+
+            <span><strong>Redacción:</strong> [credits]</span>
+            <span><strong>Coordinación:</strong> Milagros Requena</span>
+            <span><strong>Desarrollo Web:</strong> Anna Absi</span><br />
+            <span>Si deseas contactarte con la unidad puedes escribirnos a:</span>
+            <span><strong>lrdata@glr.pe</strong></span>
+            <br />
+            <span>© Grupo La República </span>
+            <span>Todos los derechos reservados.</span>
+        </div>
+    </footer>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-6536106-1"></script>
+    <script type="text/javascript"
+        defer>            function gtag() {
+                dataLayer.push(arguments);
+            }
+            (window.dataLayer = window.dataLayer || []), gtag("js", new Date()), gtag("config", "UA-6536106-1");        </script>
+</body>
+
+</html>
